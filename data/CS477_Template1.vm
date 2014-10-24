@@ -1,0 +1,15 @@
+Hello $name,
+
+Your score summary for the Programming Assignment 1:
+
+>> Score: $score out of 17.
+>> Remarks: $remark
+
+IF YOU HAVE ANY COMPLAINTS ABOUT YOUR SCORE FEEL FREE TO CONTACT ME.
+
+Marking is based on some input set provided by Dr. Larmore. There were 17 inputs tested in your program. Your score is the number inputs for which your program gave correct output.
+
+Dr. Larmore has told to keep the score as it is for now, it will be converted to appropriate grade later. 
+
+
+Thank You!!

@@ -1,0 +1,22 @@
+Hello $name,
+
+***** Assignment#5 Grades *****
+
+>> GRADE: $grade out of 100
+
+>> REMARKS: $remark
+
+
+ IF YOU HAVE ANY COMPLAINTS ABOUT YOUR GRADE FEEL FREE TO CONTACT ME
+
+
+PLEASE STRICTLY FOLLOW MY SUBMISSION NOTE AS FOLLOWS
+
+
+ ***** NOTE FOR ASSIGNMENT SUBMISSION ***
+1. You need to submit ALL files mentioned in your lab sheet.
+2. DO NOT SUBMIT Eclipse or any other project as a WHOLE
+3. Put all those files in a directory and NAME it with your UNLV account name. Eg. if your unlv email is xxx@unlv.nevada.edu, name the directory to be 'xxx'
+4. zip the directry 'xxx'
+5. mail the zip to me @ manans1@unlv.nevada.edu
+6. IMPORTANT when emailing me USE this subject 'CS202 ASSIGNMENT #<nr>' 'nr' is the assignment number. Eg. CS202 ASSIGNMENT #3
