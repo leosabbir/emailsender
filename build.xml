@@ -8,7 +8,7 @@
 	<property name="classes.dir" value="${build.dir}/classes" />
 	<property name="jar.dir" value="${build.dir}/jar" />
 	<property name="test-classes.dir" value="${build.dir}/test-classes" />
-	<property name="main-class" value="com.namobuddha.emailsender.SendEmail" />
+	<property name="main-class" value="com.namobuddha.emailsender.CS202EmailSender" />
 	<property name="lib.dir" value="lib" />
 	<property name="dist.dir" value="dist" />
 	<property environment="env" />
@@ -71,7 +71,7 @@
 		<path refid="classpath" />
 	</pathconvert>
 
-	<target name="run">
+	<target name="cs202">
 		<java fork="true" classname="${main-class}">
 			<classpath>
 				<path refid="lib.path.id" />
@@ -80,6 +80,16 @@
 			</classpath>
 		</java>
 	</target>
+	
+	<target name="cs477">
+			<java fork="true" classname="com.namobuddha.emailsender.CS477EmailSender">
+				<classpath>
+					<path refid="lib.path.id" />
+					<path refid="classpath" />
+					<path refid="application" />
+				</classpath>
+			</java>
+		</target>
 
 	<target name="clean-build" depends="clean, compile, jar" />
 
