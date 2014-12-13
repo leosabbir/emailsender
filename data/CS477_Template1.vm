@@ -1,15 +1,18 @@
 Hello $name,
 
-Your score summary for the Programming Assignment 1:
+Your grade summary for the Homework 5:
 
->> Score: $score out of 17.
->> Remarks: $remark
+>> Grade: $remark
+##>> Remarks: $remark
 
-IF YOU HAVE ANY COMPLAINTS ABOUT YOUR SCORE FEEL FREE TO CONTACT ME.
+Since you don't have class before your second mid-term, Dr. Larmore has asked to give the assignment papers to you prior to the mid term day, so that you can analyse the mistake you have done (if any).
 
-Marking is based on some input set provided by Dr. Larmore. There were 17 inputs tested in your program. Your score is the number inputs for which your program gave correct output.
+I will try to keep your assignments with me all the time, catch me and take your paper ;-).
 
-Dr. Larmore has told to keep the score as it is for now, it will be converted to appropriate grade later. 
+FYI I wil be in the lab 361 in the following times:
+Mon/Wed: 12:45 to 1:15 and
+         5:15 to 5:45
+ 
 
 
 Thank You!!

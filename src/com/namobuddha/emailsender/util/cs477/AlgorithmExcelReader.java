@@ -48,10 +48,11 @@ public class AlgorithmExcelReader {
 				if (emailId == null || emailId.isEmpty()) {
 					continue;
 				}
-				double marks = 0;
+				String marks="";// = 0;//CHANGED
 				if (row.getCell(2) != null) {
 					//System.out.println(row.getCell(2).getStringCellValue());
-					marks = row.getCell(2).getNumericCellValue();
+					//marks = row.getCell(2).getNumericCellValue();
+					marks = row.getCell(2).getStringCellValue();//CHANGED
 				}
 				String remarks = null;
 				if (row.getCell(3) != null) {
@@ -64,8 +65,8 @@ public class AlgorithmExcelReader {
 
 				student.setName(name);
 				student.setEmailId(emailId);
-				student.setTotalMarks(new Double(marks).intValue());
-				student.setRemarks(remarks);
+				//student.setTotalMarks(new Double(marks).intValue());
+				student.setRemarks(marks);//CHANGED
 
 				students.add(student);
 			}

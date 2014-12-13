@@ -49,33 +49,34 @@ public class CS477EmailSender {
 	public void sendToAll(List<StudentDetails> students) {
 		int i = 0;
 		for (StudentDetails student : students) {
+			if (!student.getRemarks().equals("U")) {
+				try {
+					// Create a default MimeMessage object.
+					MimeMessage message = new MimeMessage(session);
 
-			try {
-				// Create a default MimeMessage object.
-				MimeMessage message = new MimeMessage(session);
+					// Set From: header field of the header.
+					message.setFrom(new InternetAddress(config.getProperty("fromemail")));
 
-				// Set From: header field of the header.
-				message.setFrom(new InternetAddress(config.getProperty("fromemail")));
+					// Set To: header field of the header.
+					message.addRecipient(Message.RecipientType.TO,
+							new InternetAddress(student.getEmailId()));
 
-				// Set To: header field of the header.
-				message.addRecipient(Message.RecipientType.TO,
-						new InternetAddress(student.getEmailId()));
+					// Set Subject: header field
+					message.setSubject(config.getProperty("subject"));
+					message.setText(templateReader.generate(student));
 
-				// Set Subject: header field
-				message.setSubject(config.getProperty("subject"));
-				message.setText(templateReader.generate(student));
-
-				// Send message
-				if(config.get("action").equals("print")) {
-					this.printMessage(message);
-				} else {
-					Transport.send(message);
-					System.out.println("Message Successfully sent to "
-						+ student.getName());
-					i++;
+					// Send message
+					if(config.get("action").equals("print")) {
+						this.printMessage(message);
+					} else {
+						Transport.send(message);
+						System.out.println("Message Successfully sent to "
+							+ student.getName());
+						i++;
+					}
+				} catch (MessagingException mex) {
+					mex.printStackTrace();
 				}
-			} catch (MessagingException mex) {
-				mex.printStackTrace();
 			}
 		}
 		System.out.println("\n\nTotal Emails sent: " + i);
